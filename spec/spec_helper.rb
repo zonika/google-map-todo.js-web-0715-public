@@ -31,6 +31,14 @@ def app
   Rack::Builder.parse_file('config.ru').first
 end
 
+# def get_driver
+#   profile = Selenium::WebDriver::Firefox::Profile.new
+#   profile['location.lat'] = 40.7046308
+#   profile['location.lng'] = -74.01313139999999
+#   profile['status'] = "OK"
+#   profile['accuracy'] = 10.0
+#   Selenium::WebDriver.for :firefox, :profile => profile
+# end
+
 Capybara.default_driver = :selenium
-# Capybara.javascript_driver = :webkit
 Capybara.app = app
