@@ -8,12 +8,12 @@ describe "Index" do
     visit "/"
   end
 
-  it "replaces the spinner with the user's longitude to #longitude div" do
+  it "replaces the spinner with the user's longitude in the #longitude div" do
     expect(page.find("#longitude")).to have_content('-74.01')
     expect(page.find("#longitude")).to_not have_content(spinner)
   end
 
-  it "replaces the spinner with the user's latitude to #latitude div" do
+  it "replaces the spinner with the user's latitude in the #latitude div" do
     expect(page.find("#latitude")).to have_content('40.705')
     expect(page.find("#latitude")).to_not have_content(spinner)
   end
