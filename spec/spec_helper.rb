@@ -19,13 +19,10 @@ def app
 end
 
 Capybara.register_driver :dev_selenium do |app|
-  profile = Selenium::WebDriver::Firefox::Profile.new
-  # profile["geo.wifi.uri"] = "spec/fixtures/profile_preferences.json"
-  # profile.set_preference("geo.wifi.uri", "spec/fixtures/profile_preferences.json");
+  profile = Selenium::WebDriver::Firefox::ProfilesIni.new["dev"]
   Capybara::Selenium::Driver.new( app, :browser => :firefox, :profile => profile ) 
 end
 
-# Capybara.default_driver = :dev_selenium
-Capybara.default_driver = :selenium
+Capybara.default_driver = :dev_selenium
 
 Capybara.app = app
