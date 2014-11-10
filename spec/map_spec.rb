@@ -1,8 +1,8 @@
 describe "Index" do
 
-  let(:spinner)    { '<i class="fa fa-spinner fa-spin' }
-  let(:map_div)    { "<div class=\"gm-style\" style=\"position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;\">" }
-  let(:cursor_url) { "https://maps.gstatic.com/mapfiles/openhand_8_8.cur" }
+  let(:spinner) { '<i class="fa fa-spinner fa-spin' }
+  let(:map_link) { "http://www.google.com/intl/en-US_US/help/terms_maps.html" }
+  let(:messages) { ["Map data ©", "Google"] }
 
   before(:each) do
     visit "/"
@@ -19,9 +19,14 @@ describe "Index" do
   end
 
   it "replaces the spinner with a map in the #map_canvas div" do
-    expect(page.find("#map_canvas")).to have_content(map_div)
-    expect(page.find("#map_canvas")).to have_content(cursor_url)
     expect(page.find("#map_canvas")).to_not have_content(spinner)
+    
+    expect { page.find(:xpath, '//a[@title="Click to see this area on Google Maps"]') }.to_not raise_error
+    expect(page.all(".gm-style-mtc")[0].text).to eq("Map")
+    expect(page.all(".gm-style-mtc")[-1].text).to eq("Satellite")
+    
+    container = page.all(".gmnoprint")[0]
+    messages.each { |msg| expect(container.text).to include(msg) }
   end 
 
 end
