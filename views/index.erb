@@ -15,10 +15,13 @@
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
     <!-- custom style and scripts -->
     <link href="stylesheets/custom.css" rel="stylesheet">
-    <script src="javascripts/fetch_location.js"></script>
     <script src="javascripts/insert_map.js"></script>
+    <script src="javascripts/fetch_location.js"></script>
   </head>
 
   <body>
@@ -48,7 +51,11 @@
       <div class="col-md-12 google-map-container">
         <div id="google-map">
           <h3>Map</h3>
-          <i class="fa fa-spinner fa-spin fa-3x"></i>
+          <div id="map_canvas">
+            <div class="vertical-align">
+              <i class="fa fa-spinner fa-spin fa-5x"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>

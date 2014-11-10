@@ -13,6 +13,7 @@ $(document).ready(function(){
   function showPosition(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
+    insertMap(latitude, longitude);
     $("#latitude").html(latitude + "°");
     $("#longitude").html(longitude + "°");
   }

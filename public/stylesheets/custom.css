@@ -20,6 +20,13 @@
   text-align: center;
 }
 
-#google-map {
-  padding: 20px;
+#map_canvas {
+  height: 400px;
+  background-color: #EEE;
+  border-radius: 5px;
+}
+
+
+.vertical-align {
+  padding-top: 160px;
 }
