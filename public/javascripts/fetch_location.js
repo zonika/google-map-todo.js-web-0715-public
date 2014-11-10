@@ -1,13 +1,23 @@
 $(document).ready(function(){
 
-  var errorMessage = "<p>Please use <a href=\"https://www.google.com/chrome/browser/\">Chrome</a>, <a href=\"http://support.apple.com/downloads/#safari\"> Safari</a>, or <a href=\"https://www.mozilla.org/en-US/firefox/new/\">Firefox</a> and enable geolocation.</p>";
+  var browserError = "Please use <a href=\"https://www.google.com/chrome/browser/\">Chrome</a>, <a href=\"http://support.apple.com/downloads/#safari\"> Safari</a>, or <a href=\"https://www.mozilla.org/en-US/firefox/new/\">Firefox</a>.";
+  var enableError = "Please enable location sharing.";
+  var geo_options = {
+    enableHighAccuracy: true, 
+    maximumAge        : 30000, 
+    timeout           : 27000
+  };
 
   function getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.watchPosition(showPosition, showError, geo_options);
     } else {
-      $(".error-message").html(errorMessage);
+      $(".error-message").html(browserError);
     }
+  }
+
+  function showError() {
+    $(".error-message").html(enableError);
   }
 
   function showPosition(position) {
