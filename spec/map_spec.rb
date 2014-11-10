@@ -10,11 +10,11 @@ describe "Index" do
 
   it "replaces the spinner with the user's longitude to #longitude div" do
     expect(page.find("#longitude")).to have_content('-74.01')
-    expect(page.find("#longitude")).to_not have_content('40.705')
+    expect(page.find("#longitude")).to_not have_content(spinner)
   end
 
   it "replaces the spinner with the user's latitude to #latitude div" do
-    expect(page.find("#latitude")).to have_content('')
+    expect(page.find("#latitude")).to have_content('40.705')
     expect(page.find("#latitude")).to_not have_content(spinner)
   end
 
@@ -22,6 +22,6 @@ describe "Index" do
     expect(page.find("#map_canvas")).to have_content(map_div)
     expect(page.find("#map_canvas")).to have_content(cursor_url)
     expect(page.find("#map_canvas")).to_not have_content(spinner)
-  end
+  end 
 
 end
