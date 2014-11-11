@@ -23,17 +23,18 @@ If you are working on this todo at an address other than [11 Broadway, New York,
 
 The testing suite for this todo needs you to make a Firefox profile called "dev" that allows location sharing for all requests from `127.0.0.1`. This will ensure that the testing suite can request your location without you having to click the "Enable Location Sharing" button an absurd number of times.
 
-
-* From the root of this todo, start a background `rackup` process (type `rackup` in the terminal, open a new terminal tab)
+* Run `bundle install`.
+* Start a background `rackup` process (type `rackup` then open a new window with `command ⌘` + `T`).
 * Make sure Firefox is completely closed on your computer and enter `/Applications/Firefox.app/Contents/MacOS/firefox-bin -p` into your terminal.
-* Click "Create Profile..."
-* Click "Continue"
-* Name your new profile "dev" and save it in the default location.
-* On the main menu, unclick the "Use the selected profile without asking at startup" checkbox so that Firefox won't default to this dev environment.
+* Click `Create Profile...`.
+* Click `Continue`.
+* Name your new profile `dev` and save it in the default location.
+* On the main menu, unclick the `Use the selected profile without asking at startup` checkbox so that Firefox won't default to this dev environment.
 * While `dev` is highlighted, click `Start Firefox`.
 * Go to [127.0.0.1:9292/](http://127.0.0.1:9292/) in your dev profile in the Firefox browser and click on `Tools` in the nav bar.
-* Click on `Page Info`.
-* Under "Access Your Location", check the `Allow` radio button.
+* Click on `Page Info`
+* Click on `Permissions`
+* Under "Access Your Location", uncheck `Use Default` and then check the `Allow`.
 * Exit Firefox and you're solid.
 
 This todo is tested using Capybara so run `rspec` after you've completed the steps above to see where you're at.
