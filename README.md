@@ -32,8 +32,8 @@ The testing suite for this todo needs you to make a Firefox profile called "dev"
 * On the main menu, unclick the `Use the selected profile without asking at startup` checkbox so that Firefox won't default to this dev environment.
 * While `dev` is highlighted, click `Start Firefox`.
 * Go to [127.0.0.1:9292/](http://127.0.0.1:9292/) in your dev profile in the Firefox browser and click on `Tools` in the nav bar.
-* Click on `Page Info`
-* Click on `Permissions`
+* Click on `Page Info`.
+* Click on `Permissions`.
 * Under "Access Your Location", uncheck `Use Default` and then check the `Allow`.
 * Exit Firefox and you're solid.
 
