@@ -23,6 +23,7 @@ If you are working on this todo at an address other than [11 Broadway, New York,
 
 The testing suite for this todo needs you to make a Firefox profile called "dev" that allows location sharing for all requests from `127.0.0.1`. This will ensure that the testing suite can request your location without you having to click the "Enable Location Sharing" button an absurd number of times.
 
+
 * From the root of this todo, start a background `rackup` process (type `rackup` in the terminal, open a new terminal tab)
 * Make sure Firefox is completely closed on your computer and enter `/Applications/Firefox.app/Contents/MacOS/firefox-bin -p` into your terminal.
 * Click "Create Profile..."
@@ -35,6 +36,8 @@ The testing suite for this todo needs you to make a Firefox profile called "dev"
 * Under "Access Your Location", check the `Allow` radio button.
 * Exit Firefox and you're solid.
 
+This todo is tested using Capybara so run `rspec` after you've completed the steps above to see where you're at.
+
 ### JavaScript
 
 * In `fetch_location.js`, fill out `getLocation` such that it will fetch the user's longitude and latitude.
@@ -46,6 +49,7 @@ The testing suite for this todo needs you to make a Firefox profile called "dev"
 * This app is tested using Capybara with Selenium WebDriver.
 
 ## Resources
+
 * [Firefox](https://support.mozilla.org/) - [Creating a Firefox Profile](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)
 * [Find Your Lat and Lng](http://mygeoposition.com/)
 * [MDN](https://developer.mozilla.org/) - [Using Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
