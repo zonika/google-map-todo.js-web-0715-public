@@ -1,7 +1,7 @@
 ---
 tags: google, map, api, location, todo
 languages: javascript 
-resources: 2
+resources: 5
 ---
 
 # Google Maps
@@ -15,9 +15,9 @@ resources: 2
 
 ## Instructions
 
-## Location Setup
+### Location Setup
 
-If you are working on this todo at an address other than [11 Broadway, New York, NY](https://goo.gl/maps/c5T2z), [find](http://mygeoposition.com/) your latitude and longitude and replace the values in `spec/fixtures/student_position.json`. Make sure your new latitude and longitude values specify to the tens decimal place but no further (otherwise your tests might be too specific and fail). Also be sure to keep these values as strings.
+If you are working on this todo at an address other than [11 Broadway, New York, NY](https://goo.gl/maps/c5T2z), find your [latitude and longitude](http://mygeoposition.com/) and replace the values in `spec/fixtures/student_position.json`. Make sure your new latitude and longitude values specify to the tens decimal place but no further (otherwise your tests might be too specific and fail). Also be sure to keep these values as strings.
 
 ### Test Setup
 
@@ -46,7 +46,8 @@ The testing suite for this todo needs you to make a Firefox profile called "dev"
 * This app is tested using Capybara with Selenium WebDriver.
 
 ## Resources
-
+* [Firefox](https://support.mozilla.org/) - [Creating a Firefox Profile](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)
+* [Find Your Lat and Lng](http://mygeoposition.com/)
 * [MDN](https://developer.mozilla.org/) - [Using Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
 * [W3Schools](http://www.w3schools.com) - [HTML5 Geolocaton](http://www.w3schools.com/html/html5_geolocation.asp)
 * [Google Developers](https://developers.google.com/) - [Adding a Google Map](https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map)
