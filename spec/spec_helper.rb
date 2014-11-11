@@ -6,6 +6,7 @@ require 'json'
 require 'rack/test'
 require 'capybara/rspec'
 require 'capybara/dsl'
+require 'capybara/rspec/matchers'
 require 'capybara-webkit'
 require 'selenium-webdriver'
 
