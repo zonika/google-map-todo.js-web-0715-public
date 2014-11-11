@@ -11,9 +11,13 @@ resources: 2
 1. Find the user's location using JavaScript
 2. Use the user's location to render a Google map
 
-[Here's a video](https://s3-us-west-2.amazonaws.com/readme-photos/google_map_todo.mov) of the functionality we're going for. To accomplish this todo, you will need to create a new Firefox profile and then alter the two files in the `public/javascripts` folder. 
+[Here's a video](https://s3-us-west-2.amazonaws.com/readme-photos/google_map_todo.mov) of the functionality we're going for. To accomplish this todo, you will need set your latitude and longitude for the spec, to create a new Firefox profile, and alter the two files in the `public/javascripts` folder. 
 
 ## Instructions
+
+## Location Setup
+
+If you are working on this todo at an address other than [11 Broadway, New York, NY](https://goo.gl/maps/c5T2z), [find](http://mygeoposition.com/) your latitude and longitude and replace the values in `spec/fixtures/student_position.json`. Make sure your new latitude and longitude values specify to the tens decimal place but no further (otherwise your tests might be too specific and fail). Also be sure to keep these values as strings.
 
 ### Test Setup
 
