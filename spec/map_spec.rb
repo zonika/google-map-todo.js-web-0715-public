@@ -12,18 +12,21 @@ describe "Index" do
   end
 
   it "replaces the spinner with the user's longitude in the #longitude div" do
+    sleep(5)
     expect(page.find("#longitude")).to have_content(location_data["longitude"])
     longitude_html = page.evaluate_script("document.getElementById('longitude').innerHTML")
     expect(longitude_html).to_not include(spinner)
   end
 
   it "replaces the spinner with the user's latitude in the #latitude div" do
+    sleep(5)
     expect(page.find("#latitude")).to have_content(location_data["latitude"])
     latitude_html = page.evaluate_script("document.getElementById('latitude').innerHTML")
     expect(latitude_html).to_not include(spinner)
   end
 
-  it "replaces the spinner with a google map in the #map_canvas div" do 
+  it "replaces the spinner with a google map in the #map_canvas div" do
+    sleep(5) 
     expect { page.find(:xpath, '//a[@title="Click to see this area on Google Maps"]') }.to_not raise_error
     expect(page).to have_selector('.gm-style-mtc', count: 2)
     expect(page.all(".gm-style-mtc")[0].text).to eq("Map")

@@ -37,7 +37,7 @@ The testing suite for this todo needs you to make a Firefox profile called "dev"
 * Under "Access Your Location", uncheck `Use Default` and then check the `Allow`.
 * Exit Firefox and you're solid.
 
-This todo is tested using Capybara so run `rspec` after you've completed the steps above to see where you're at.
+This todo is tested using Capybara so run `rspec` after you've completed the steps above to see where you're at. The test has built in 5 second timers so we suggest running `rspec --fail-fast` to save time. If you run `rackup` or `shotgun` and the entire functionality is there but your tests are still failing, feel free to up the sleep timers in `map_spec.rb`. You could change `sleep(5)` to `sleep(10)`, whatever works!
 
 ### JavaScript
 
