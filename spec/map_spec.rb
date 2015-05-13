@@ -13,15 +13,15 @@ describe "Index" do
 
   it "replaces the spinner with the user's longitude in the #longitude div" do
     sleep(5)
-    expect(page.find("#longitude")).to have_content(location_data["longitude"])
-    longitude_html = page.evaluate_script("document.getElementById('longitude').innerHTML")
+    longitude_html = page.evaluate_script("document.getElementById('longitude').innerHTML.substring(0,6)")
+    expect(longitude_html).to eq(location_data["longitude"])
     expect(longitude_html).to_not include(spinner)
   end
 
   it "replaces the spinner with the user's latitude in the #latitude div" do
     sleep(5)
-    expect(page.find("#latitude")).to have_content(location_data["latitude"])
-    latitude_html = page.evaluate_script("document.getElementById('latitude').innerHTML")
+    latitude_html = page.evaluate_script("document.getElementById('latitude').innerHTML.substring(0,5)")
+    expect(latitude_html).to eq(location_data["latitude"])
     expect(latitude_html).to_not include(spinner)
   end
 
