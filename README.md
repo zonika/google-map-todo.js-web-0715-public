@@ -1,8 +1,4 @@
----
-tags: google, map, api, location, todo
-languages: javascript 
-resources: 5
----
+
 
 # Google Maps
 
